@@ -1,0 +1,27 @@
+.friendItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 400px;
+}
+.avatar {
+  margin-right: 15px;
+}
+.spanStatusOnline,
+.spanStatus {
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.spanStatusOnline {
+  width: 20px;
+  height: 20px;
+  background-color: #ec0a0a;
+}
+.spanStatus {
+  background-color: #01f41d;
+}
+
+.friendName {
+  font-size: 20px;
+  font-weight: 500;
+}

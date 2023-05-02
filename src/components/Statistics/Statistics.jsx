@@ -10,7 +10,8 @@ export const Statistics = ({ stats, title }) => {
          {stats.map(({ id, label, percentage }) => (
             <li
                key={id}
-               className={css.statItem}>
+               className={css.statItem}
+               style= {{backgroundColor: randomColor()}}>
             <span className={css.statLabel}>{label}</span>
             <span className={css.statPercentage}>{percentage}%</span>
             </li>)
@@ -29,3 +30,7 @@ Statistics.propTypes = {
       }).isRequired
    ).isRequired,
 };
+
+function randomColor() {
+  return '#' + Math.floor(Math.random()*16777215).toString(16)
+}
