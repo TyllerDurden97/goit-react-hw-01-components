@@ -18,6 +18,8 @@
   background-color: #ec0a0a;
 }
 .spanStatus {
+  width: 20px;
+  height: 20px;
   background-color: #01f41d;
 }
 

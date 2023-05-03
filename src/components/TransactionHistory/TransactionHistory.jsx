@@ -14,7 +14,7 @@ export const TransactionHistory = ({ items }) => {
 
          <tbody className={css.tableBody}>
             {items.map(({ id, type, amount, currency }) => (
-               <tr id={id} className={css.tableRow}>
+               <tr key={id} className={css.tableRow}>
                   <td className={css.tableBodyItem}>{type}</td>
                   <td className={css.tableBodyItem}>{amount}</td>
                   <td className={css.tableBodyItem}>{currency}</td>
@@ -24,10 +24,14 @@ export const TransactionHistory = ({ items }) => {
    )
 };
 
+
 TransactionHistory.propTypes = {
+   items: PropTypes.arrayOf(
+   PropTypes.shape({
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired
-}; 
-
+      }).isRequired
+   ).isRequired,
+};
